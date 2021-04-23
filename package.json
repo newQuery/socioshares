@@ -1,0 +1,16 @@
+{
+  "name": "socioshare",
+  "version": "1.0.0",
+  "description": "Project from the Sociopaths group from Hackforums.net",
+  "scripts": {
+    "start-backend": "cd backend && npm run develop",
+    "start-frontend": "cd frontend && npm run dev",
+    "install-backend": "cd backend && npm install && cp .env.example .env",
+    "install-frontend": "cd frontend && npm install && cp .env.example .env",
+    "socio-dev": "concurrently --kill-others \"npm run start-backend\" \"npm run start-frontend\"",
+    "socio-install": "npm run install-backend && npm run install-frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2"
+  }
+}
